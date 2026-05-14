@@ -46,7 +46,7 @@ Contains Python dependencies required for the project.
 Defines the Docker image configuration for the Flask application.
 
 ### docker-compose.yml
-Used to build and run the Docker container.
+Used to build and to run the Docker container.
 
 ---
 
