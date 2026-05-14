@@ -16,19 +16,21 @@ The objective of this task is to containerize a simple Flask web application usi
 
 ## Project Structure
 
+## Project Structure
+
+```text
 ALFIDO INTERNSHIP/
 │
 ├── TASK1-Containerization/
-│   │
 │   ├── app.py
 │   ├── requirements.txt
 │   ├── Dockerfile
 │   ├── docker-compose.yml
 │   ├── README.md
-│   │
 │   └── screenshots/
 │
 └── README.md
+```
 
 ---
 
