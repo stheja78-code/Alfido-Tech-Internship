@@ -20,6 +20,7 @@ jobs:
       - name: Install dependencies
         run: |
           pip install -r TASK2-CICD-PIPELINE/requirements.txt
+          pip install pytest
 
       - name: Run tests
         run: |
