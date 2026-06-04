@@ -1,5 +1,8 @@
 Task 2: CI/CD Pipeline Setup using GitHub Actions
 
+Status badge:
+[![CI/CD Pipeline](https://github.com/stheja78-code/Alfido-Tech-Internship/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/stheja78-code/Alfido-Tech-Internship/actions/workflows/ci-cd.yml)
+
 Objective:
 
 To create an automated CI/CD pipeline that builds, tests, and validates a containerized Flask application using GitHub Actions.
