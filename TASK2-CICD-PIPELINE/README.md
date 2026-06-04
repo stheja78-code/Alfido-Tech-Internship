@@ -1,6 +1,6 @@
 Task 2: CI/CD Pipeline Setup using GitHub Actions
 
-Status badge:
+Workflow Status badge:
 [![CI/CD Pipeline](https://github.com/stheja78-code/Alfido-Tech-Internship/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/stheja78-code/Alfido-Tech-Internship/actions/workflows/ci-cd.yml)
 
 Objective:
@@ -58,12 +58,6 @@ This workflow automatically:
 - Builds the Docker image
 
 The workflow is stored at the repository root because GitHub Actions only recognizes workflow files from the root ".github/workflows" directory.
-
-Workflow Status Badge:
-
-"CI/CD Pipeline" (https://github.com/YOUR_USERNAME/Alfido-Tech-Internship/actions/workflows/ci-cd.yml/badge.svg)
-
-Replace "YOUR_USERNAME" with your GitHub username.
 
 
 Commands Used:
