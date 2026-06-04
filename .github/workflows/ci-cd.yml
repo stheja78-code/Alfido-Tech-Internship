@@ -6,26 +6,37 @@ on:
       - main
 
 jobs:
-  build-test:
+  build-test-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout Repository
+        uses: actions/checkout@v4
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
-      - name: Install dependencies
+      - name: Install Dependencies
         run: |
           pip install -r TASK2-CICD-PIPELINE/requirements.txt
           pip install pytest
 
-      - name: Run tests
+      - name: Run Tests
         run: |
           pytest TASK2-CICD-PIPELINE/test_app.py
 
+      - name: Login to Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
       - name: Build Docker Image
         run: |
-          docker build -t flask-app ./TASK2-CICD-PIPELINE
+          docker build -t 230307/flask-app:latest ./TASK2-CICD-PIPELINE
+
+      - name: Push Docker Image
+        run: |
+          docker push 230307/flask-app:latest
