@@ -1,10 +1,10 @@
 Task 2: CI/CD Pipeline Setup using GitHub Actions
 
-Objective
+Objective:
 
 To create an automated CI/CD pipeline that builds, tests, and validates a containerized Flask application using GitHub Actions.
 
-Tools & Technologies
+Tools & Technologies:
 
 - GitHub
 - GitHub Actions
@@ -13,27 +13,26 @@ Tools & Technologies
 - Docker
 - Pytest
 
-Project Structure
+Project Structure:
 
-TASK2-CICD-PIPELINE/
+Alfido-Tech-Internship/
+│
+├── .github/
+│   └── workflows/
+│       └── ci-cd.yml
+│
+├── TASK1-Containerization/
+│
+├── TASK2-CICD-PIPELINE/
+│   ├── app.py
+│   ├── requirements.txt
+│   ├── Dockerfile
+│   ├── test_app.py
+│   └── README.md
+│
+└── README.md
 
-├── app.py
-
-├── requirements.txt
-
-├── Dockerfile
-
-├── test_app.py
-
-├── README.md
-
-└── .github/
-
-    └── workflows/
-
-        └── ci-cd.yml
-
-Workflow Overview
+Workflow Overview:
 
 The CI/CD pipeline performs the following actions automatically whenever code is pushed to the main branch:
 
@@ -43,23 +42,38 @@ The CI/CD pipeline performs the following actions automatically whenever code is
 4. Runs automated tests using Pytest.
 5. Builds the Docker image successfully.
 
-Workflow Status Badge
+CI/CD Workflow:
+
+The GitHub Actions workflow file for this task is located at:
+
+.github/workflows/ci-cd.yml
+
+This workflow automatically:
+
+- Installs project dependencies
+- Runs pytest test cases
+- Builds the Docker image
+
+The workflow is stored at the repository root because GitHub Actions only recognizes workflow files from the root ".github/workflows" directory.
+
+Workflow Status Badge:
 
 "CI/CD Pipeline" (https://github.com/YOUR_USERNAME/Alfido-Tech-Internship/actions/workflows/ci-cd.yml/badge.svg)
 
 Replace "YOUR_USERNAME" with your GitHub username.
 
-Commands Used
 
-Build Docker Image
+Commands Used:
+
+->Build Docker Image
 
 docker build -t flask-app .
 
-Run Docker Container
+->Run Docker Container
 
 docker run -p 5000:5000 flask-app
 
-Git Commands
+Git Commands:
 
 git add .
 
@@ -67,11 +81,9 @@ git commit -m "Added Task 2 CI/CD Pipeline"
 
 git push origin main
 
-Outcome
+Outcome:
 
 Successfully implemented an automated CI/CD pipeline using GitHub Actions that builds, tests, and validates the Flask application. The workflow executes automatically on every push to the main branch, ensuring continuous integration and improving software delivery efficiency.
 
-Repository
+GitHub Repository:https://github.com/stheja78-code/Alfido-Tech-Internship.git
 
-GitHub Repository:
-https://github.com/YOUR_USERNAME/Alfido-Tech-Internship
